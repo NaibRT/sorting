@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop-part05-form", "oop-part05-form\oop-part05-form.csproj", "{80F9B4FE-5B42-4028-BB94-2CCE749943FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80F9B4FE-5B42-4028-BB94-2CCE749943FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F9B4FE-5B42-4028-BB94-2CCE749943FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F9B4FE-5B42-4028-BB94-2CCE749943FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F9B4FE-5B42-4028-BB94-2CCE749943FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {968DAE27-B659-4621-8615-C85915957609}
+	EndGlobalSection
+EndGlobal
