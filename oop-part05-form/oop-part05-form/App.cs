@@ -71,19 +71,33 @@ namespace oop_part05_form
         private void button1_Click(object sender, EventArgs e)
         {
             productListView.Text = string.Empty;
-            int x = 65;
-            for (int i = 0; i < 25; i++)
+            Product[] arr = new Product[Entity.Products.Count];
+            int j = 0;
+            foreach (var item in Entity.Products)
             {
-                foreach (var item in Entity.Products)
+                arr[j++] = item;
+            }
+            Product temp;
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                for (int c = 0; c < arr.Length-1; c++)
                 {
-
-                    if (item.Name[0] == ((char)x))
+                    int x = String.Compare(arr[c].Name, arr[c + 1].Name);
+                    if (x == 1)
                     {
-                        productListView.Text += item.Id + " . " + item.Name + " / " + item.CategoryName + " / " + item.Price + "\r\n";
+                       
+                        temp = arr[c + 1];
+                        arr[c + 1] = arr[c];
+                        arr[c] = temp;
+                      
                     }
-
                 }
-                x++;
+               
+
+            }
+            foreach (var item in arr)
+            {
+                productListView.Text += item.Id + " . " + item.Name + " / " + item.CategoryName + " / " + item.Price + "\r\n";
             }
 
 
@@ -91,9 +105,39 @@ namespace oop_part05_form
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-        
+            productListView.Text = string.Empty;
+            Product[] arr = new Product[Entity.Products.Count];
+            int i = 0;
+            foreach (var item in Entity.Products)
+            {
+                arr[i++] = item;
+            }
+            Product temp;
+            for (int j = 0; j < arr.Length-1; j++)
+            {
+                for (int a = 0; a < arr.Length-1; a++)
+                {
+                    if (arr[a].Price>arr[a+1].Price)
+                    {
+                        temp = arr[a + 1];
+                        arr[a + 1]= arr[a];
+                        arr[a] = temp;
+
+                    }
+
+                }
+            }
+
+            foreach (var item in arr)
+            {
+                productListView.Text += item.Id + " . " + item.Name + " / " + item.CategoryName + " / " + item.Price + "\r\n";
+            }
             
+        }
+
+        private void App_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

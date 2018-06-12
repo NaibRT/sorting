@@ -156,6 +156,7 @@
             this.Controls.Add(this.productName);
             this.Name = "App";
             this.Text = "ADD";
+            this.Load += new System.EventHandler(this.App_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
